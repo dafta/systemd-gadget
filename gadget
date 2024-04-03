@@ -1,12 +1,12 @@
 ## {GADGET}/idVendor
 ##   Type:   number
 ##   Format: 0x05F9
-ID_VENDOR=0x05F9
+ID_VENDOR=0x28DE
 
 ## {GADGET}/idProduct
 ##   Type:   number
 ##   Format: 0x1234
-ID_PRODUCT=0x1234
+ID_PRODUCT=0x3000
 
 ## {GADGET}/strings/*/serialnumber
 ##   Type:   serial string / mode
@@ -17,11 +17,11 @@ SERIAL=serialno
 
 ## {GADGET}/strings/*/manufacturer
 ##   Type:   string
-MANFACTURER=ClassFun
+MANFACTURER=Valve
 
 ## {GADGET}/strings/*/product
 ##   Type:   string
-PRODUCT=MiniLinux
+PRODUCT=Steam Deck
 
 ## {GADGET}/configs/*/strings/*/configuration
 ##   Type:   string
@@ -29,7 +29,7 @@ CONFIGURATION=gadget
 
 ## Gadget device name
 ##   Type:   string
-GADGET=gadget
+GADGET=Steam Deck
 
 ## USB device controller name (/sys/class/udc)
 ##   Type:   string / mode
