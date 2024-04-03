@@ -29,9 +29,9 @@ CONFIGURATION=gadget
 
 ## Gadget device name
 ##   Type:   string
-GADGET=Steam Deck
+GADGET=SteamDeck
 
 ## USB device controller name (/sys/class/udc)
 ##   Type:   string / mode
 ##     auto: /proc/cmdline(androidboot.usbcontroller) or scan /sys/class/udc
-UDC=auto
+UDC=dwc3.1.auto
