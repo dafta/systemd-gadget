@@ -27,4 +27,12 @@ case "${1}" in
 		mkdir "configs/a.1/strings/0x409"
 		echo "${CONFIGURATION}" > "configs/a.1/strings/0x409/configuration"
 	;;
+	stop)
+		cd "${GADGET}"
+		rmdir "configs/a.1/strings/0x409"
+		rm "os_desc/a.1"
+		rmdir "configs/a.1" "strings/0x409"
+		cd ..
+		rmdir "${GADGET}"
+	;;
 esac
