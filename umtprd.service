@@ -1,0 +1,12 @@
+[Unit]
+Description=uMTP Responder
+Before=gadget-start.service
+After=usbgadget-func-mtp.service
+Requires=usbgadget-func-mtp.service
+[Service]
+Type=simple
+SyslogIdentifier=umtp
+WorkingDirectory=/home/deck/homebrew/plugins/DeckMTP/bin
+ExecStart=/home/deck/homebrew/plugins/DeckMTP/bin/umtprd
+[Install]
+WantedBy=usb-gadget.target

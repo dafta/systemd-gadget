@@ -1,0 +1,21 @@
+[Unit]
+Description=USB Gadget MTP
+Before=umtprd.service
+After=gadget-init.service
+Requires=gadget-init.service
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+SyslogIdentifier=gadget-func-mtp
+EnvironmentFile=/etc/default/gadget
+WorkingDirectory=/sys/kernel/config/usb_gadget
+ExecStart=/usr/bin/mkdir ${GADGET}/functions/ffs.mtp
+ExecStart=/usr/bin/ln -s ${GADGET}/functions/ffs.mtp ${GADGET}/configs/a.1/
+ExecStart=/usr/bin/mkdir /dev/ffs-mtp
+ExecStart=/usr/bin/mount -t functionfs mtp /dev/ffs-mtp
+ExecStop=/usr/bin/rm ${GADGET}/configs/a.1/ffs.mtp
+ExecStop=/usr/bin/rmdir ${GADGET}/functions/ffs.mtp
+ExecStop=/usr/bin/umount /dev/ffs-mtp
+ExecStop=/usr/bin/rmdir /dev/ffs-mtp
+[Install]
+WantedBy=usb-gadget.target

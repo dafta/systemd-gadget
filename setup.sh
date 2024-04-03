@@ -3,6 +3,7 @@
 service_files=(
 	gadget-init.service
 	gadget-start.service
+	umtprd.service
 	usbgadget-func-acm.service
 	usbgadget-func-adb-post.service
 	usbgadget-func-adb-pre.service
@@ -13,6 +14,7 @@ service_files=(
 	usbgadget-func-hid.service
 	usbgadget-func-mass@.service
 	usbgadget-func-midi.service
+	usbgadget-func-mtp.service
 	usbgadget-func-ncm.service
 	usbgadget-func-obex.service
 	usbgadget-func-phonet.service
