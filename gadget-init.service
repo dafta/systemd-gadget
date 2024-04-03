@@ -11,6 +11,7 @@ SyslogIdentifier=gadget-init
 EnvironmentFile=/etc/default/gadget
 WorkingDirectory=/sys/kernel/config/usb_gadget
 ExecStart=/usr/bin/bash /etc/systemd/scripts/gadget-init.sh start
+ExecStop=/usr/bin/bash /etc/systemd/scripts/gadget-init.sh stop
 [Install]
 WantedBy=usb-gadget.target
 Also=gadget-start.service
