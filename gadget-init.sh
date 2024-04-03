@@ -1,5 +1,4 @@
 #!/usr/bin/bash
-source "$(dirname "$0")/functions.sh"
 set -e
 case "${1}" in
 	start)
