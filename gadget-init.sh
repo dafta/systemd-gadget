@@ -13,7 +13,7 @@ case "${1}" in
 		if [ "${SERIAL}" == machine ]
 		then cat /etc/machine-id > "strings/0x409/serialnumber"||_SER=false
 		elif [ "${SERIAL}" == serialno ]
-		then get_cmdline androidboot.serialno > "strings/0x409/serialnumber"||_SER=false
+		then dmidecode -s system-serial-number > "strings/0x409/serialnumber"||_SER=false
 		else _SER=false
 		fi
 		if ! "${_SER}"
