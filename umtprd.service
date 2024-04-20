@@ -6,7 +6,7 @@ Requires=usbgadget-func-mtp.service
 [Service]
 Type=simple
 SyslogIdentifier=umtp
-WorkingDirectory=/home/deck/homebrew/plugins/DeckMTP/bin
-ExecStart=/home/deck/homebrew/plugins/DeckMTP/bin/umtprd
+WorkingDirectory=$bindir
+ExecStart=$bindir/umtprd
 [Install]
 WantedBy=usb-gadget.target
