@@ -1,0 +1,15 @@
+[Unit]
+Description=USB Gadget Bind to DWC3 Driver
+Before=gadget-start.service
+Requires=gadget-init.service
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+SyslogIdentifier=gadget-bind
+EnvironmentFile=$envfile
+WorkingDirectory=$scriptsdir
+ExecStart=/usr/bin/bash $scriptsdir/gadget-bind.sh bind
+ExecStop=/usr/bin/bash $scriptsdir/gadget-bind.sh unbind
+[Install]
+WantedBy=usb-gadget.target
+Also=gadget-start.service
