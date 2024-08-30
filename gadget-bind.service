@@ -13,4 +13,3 @@ ExecStart=/usr/bin/bash $scriptsdir/gadget-bind.sh bind
 ExecStop=/usr/bin/bash $scriptsdir/gadget-bind.sh unbind
 [Install]
 WantedBy=usb-gadget.target
-Also=gadget-start.service
