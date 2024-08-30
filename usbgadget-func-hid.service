@@ -4,6 +4,7 @@ Before=gadget-start.service
 After=modprobe@usbfunc:hid.service gadget-init.service
 Wants=modprobe@usbfunc:hid.service
 Requires=gadget-init.service
+PartOf=usb-gadget.target
 [Service]
 Type=oneshot
 RemainAfterExit=yes

@@ -3,6 +3,7 @@ Description=USB Gadget Start
 After=modprobe@udc-core.service gadget-init.service
 Wants=modprobe@udc-core.service
 Requires=gadget-init.service
+PartOf=usb-gadget.target
 [Service]
 Type=oneshot
 RemainAfterExit=yes

@@ -4,6 +4,7 @@ Before=gadget-start.service
 After=modprobe@usbfunc:mass_storage.service gadget-init.service
 Wants=modprobe@usbfunc:mass_storage.service
 Requires=gadget-init.service
+PartOf=usb-gadget.target
 [Service]
 Type=oneshot
 RemainAfterExit=yes

@@ -4,6 +4,7 @@ After=modprobe@libcomposite.service sys-kernel-config.mount
 Wants=modprobe@libcomposite.service
 Requires=sys-kernel-config.mount
 ConditionPathExists=/sys/kernel/config/usb_gadget
+PartOf=usb-gadget.target
 [Service]
 Type=oneshot
 RemainAfterExit=yes

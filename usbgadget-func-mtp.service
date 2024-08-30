@@ -3,6 +3,7 @@ Description=USB Gadget MTP
 Before=umtprd.service
 After=gadget-init.service
 Requires=gadget-init.service
+PartOf=usb-gadget.target
 [Service]
 Type=oneshot
 RemainAfterExit=yes

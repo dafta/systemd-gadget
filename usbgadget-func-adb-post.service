@@ -3,6 +3,7 @@ Description=USB Gadget Android Debug Bridge Post-Setup
 Before=gadget-start.service
 After=adbd.service dev-usb\x2dffs-adb.mount gadget-init.service
 Requires=adbd.service dev-usb\x2dffs-adb.mount gadget-init.service
+PartOf=usb-gadget.target
 [Service]
 Type=oneshot
 RemainAfterExit=yes

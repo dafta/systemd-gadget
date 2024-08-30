@@ -4,6 +4,7 @@ Before=gadget-start.service
 After=modprobe@usbfunc:obex.service gadget-init.service
 Wants=modprobe@usbfunc:obex.service
 Requires=gadget-init.service
+PartOf=usb-gadget.target
 [Service]
 Type=oneshot
 RemainAfterExit=yes

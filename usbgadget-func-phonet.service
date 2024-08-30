@@ -4,6 +4,7 @@ Before=gadget-start.service
 After=modprobe@usbfunc:phonet.service NetworkManager.service systemd-networkd.service gadget-init.service dnsmasq.service
 Wants=modprobe@usbfunc:phonet.service
 Requires=gadget-init.service
+PartOf=usb-gadget.target
 [Service]
 Type=oneshot
 RemainAfterExit=yes

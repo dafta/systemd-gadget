@@ -3,6 +3,7 @@ Description=uMTP Responder
 Before=gadget-start.service
 After=usbgadget-func-mtp.service
 Requires=usbgadget-func-mtp.service
+PartOf=usb-gadget.target
 [Service]
 Type=simple
 SyslogIdentifier=umtp

@@ -2,6 +2,7 @@
 Description=USB Gadget Bind to DWC3 Driver
 Before=gadget-start.service
 Requires=gadget-init.service
+PartOf=usb-gadget.target
 [Service]
 Type=oneshot
 RemainAfterExit=yes
