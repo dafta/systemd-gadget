@@ -15,4 +15,3 @@ ExecStart=/usr/bin/mkdir ${GADGET}/functions/ffs.adb
 ExecStop=/usr/bin/rmdir ${GADGET}/functions/ffs.adb
 [Install]
 WantedBy=usb-gadget.target
-Also=usbgadget-func-adb-post.service

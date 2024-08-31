@@ -14,4 +14,3 @@ ExecStart=/usr/bin/ln -s ${GADGET}/functions/ffs.adb ${GADGET}/configs/a.1/
 ExecStop=/usr/bin/rm ${GADGET}/configs/a.1/ffs.adb
 [Install]
 WantedBy=usb-gadget.target
-Also=usbgadget-func-adb-pre.service

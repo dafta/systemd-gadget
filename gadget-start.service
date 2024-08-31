@@ -14,4 +14,3 @@ ExecStart=/usr/bin/bash $scriptsdir/gadget-start.sh start
 ExecStop=/usr/bin/bash $scriptsdir/gadget-start.sh stop
 [Install]
 WantedBy=usb-gadget.target
-Also=gadget-init.service
